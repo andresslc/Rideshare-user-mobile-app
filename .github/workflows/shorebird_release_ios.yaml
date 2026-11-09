@@ -1,0 +1,127 @@
+# Builds a signed IPA, registers the release with Shorebird, and uploads the
+# IPA to App Store Connect. Stage builds go to TestFlight testers automatically.
+# Prod builds sit in ASC waiting for you to click Submit for Review manually.
+# iOS builds require a macOS runner: shorebird release ios wraps flutter build ipa.
+name: Shorebird Release (iOS)
+
+on:
+  workflow_dispatch:
+    inputs:
+      flavor:
+        description: Flavor to release (matches the Xcode scheme)
+        type: choice
+        options:
+          - prod
+          - staging
+          - dev
+        default: prod
+      flutter-version:
+        description: Flutter version to build the release with (must be one Shorebird supports)
+        default: "3.47.4"
+
+concurrency:
+  group: shorebird-release-ios-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: macos-latest
+    env:
+      SHOREBIRD_TOKEN: ${{ secrets.SHOREBIRD_TOKEN }}
+      FLAVOR: ${{ inputs.flavor }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve entrypoint for flavor
+        run: |
+          case "$FLAVOR" in
+            dev)     echo "TARGET=lib/main_dev.dart"     >> "$GITHUB_ENV" ;;
+            staging) echo "TARGET=lib/main_staging.dart" >> "$GITHUB_ENV" ;;
+            prod)    echo "TARGET=lib/main_prod.dart"    >> "$GITHUB_ENV" ;;
+            *) echo "::error::Unknown flavor: $FLAVOR"; exit 1 ;;
+          esac
+
+      # The Runner target is set to Automatic signing, which cannot work on a
+      # runner that has no Apple account signed in to Xcode. codemagic-cli-tools
+      # installs the certificate into a fresh keychain, then rewrites the Xcode
+      # project to Manual signing against the profile we provide.
+      - name: Install Apple signing assets
+        env:
+          IOS_CERTIFICATE_BASE64: ${{ secrets.IOS_CERTIFICATE_BASE64 }}
+          IOS_CERTIFICATE_PASSWORD: ${{ secrets.IOS_CERTIFICATE_PASSWORD }}
+          IOS_PROVISIONING_PROFILE_BASE64: ${{ secrets.IOS_PROVISIONING_PROFILE_BASE64 }}
+        run: |
+          pip3 install --break-system-packages codemagic-cli-tools
+          keychain initialize
+          echo "$IOS_CERTIFICATE_BASE64" | base64 --decode > "$RUNNER_TEMP/cert.p12"
+          keychain add-certificates \
+            --certificate "$RUNNER_TEMP/cert.p12" \
+            --certificate-password "$IOS_CERTIFICATE_PASSWORD"
+          mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles"
+          echo "$IOS_PROVISIONING_PROFILE_BASE64" | base64 --decode \
+            > "$HOME/Library/MobileDevice/Provisioning Profiles/build.mobileprovision"
+
+      # Rewrites signing in the project and writes build/ios/export_options.plist
+      # from the installed profile, so we never hardcode team or profile names.
+      # Without --export-options-plist, codemagic writes to ~/export_options.plist
+      # by default, which shorebird release ios then can't find.
+      - name: Apply provisioning profile to the Xcode project
+        run: |
+          mkdir -p build/ios
+          xcode-project use-profiles \
+            --project ios/Runner.xcodeproj \
+            --export-options-plist=build/ios/export_options.plist
+
+      - uses: shorebirdtech/setup-shorebird@v1
+        with:
+          cache: true
+
+      - uses: shorebirdtech/shorebird-release@v1
+        id: release
+        with:
+          platform: ios
+          flutter-version: ${{ inputs.flutter-version }}
+          args: --flavor ${{ env.FLAVOR }} -t ${{ env.TARGET }} --export-options-plist=build/ios/export_options.plist
+
+      - name: Upload IPA as CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa-${{ env.FLAVOR }}-${{ steps.release.outputs.release-version }}
+          path: build/ios/ipa/*.ipa
+          if-no-files-found: error
+
+      # Uploads the IPA to App Store Connect for BOTH stage and prod. Stage
+      # builds appear in TestFlight for testers immediately (no App Review).
+      # Prod builds sit in ASC; you still submit for App Review manually.
+      - name: Locate IPA
+        id: find-ipa
+        run: |
+          IPA_PATH=$(ls build/ios/ipa/*.ipa | head -n1)
+          echo "path=$IPA_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to App Store Connect
+        uses: apple-actions/upload-testflight-build@v3
+        with:
+          app-path: ${{ steps.find-ipa.outputs.path }}
+          issuer-id: ${{ secrets.ASC_ISSUER_ID }}
+          api-key-id: ${{ secrets.ASC_KEY_ID }}
+          api-private-key: ${{ secrets.ASC_KEY_P8 }}
+
+      - name: Summary
+        run: |
+          {
+            echo "### Shorebird iOS release created"
+            echo ""
+            echo "| Field | Value |"
+            echo "| --- | --- |"
+            echo "| Flavor | $FLAVOR |"
+            echo "| Release version | ${{ steps.release.outputs.release-version }} |"
+            echo ""
+            if [ "$FLAVOR" = "prod" ]; then
+              echo "IPA uploaded to App Store Connect. Submit for App Review manually in ASC."
+            else
+              echo "IPA uploaded to TestFlight. Should reach testers within ~15 minutes after Apple processes it."
+            fi
+            echo ""
+            echo "Patches only reach users who install THIS build. Do not delete the release in Shorebird."
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,140 @@
+# ─────────────────────────────────────────────
+# Flutter / Dart  (todo esto lo regenera el SDK)
+# ─────────────────────────────────────────────
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+pubspec_overrides.yaml
+.fvm/
+.flutter-versions
+migrate_working_dir/
+doc/api/
+
+# Coverage, tests y salidas de analisis
+coverage/
+lcov.info
+analysis_output.txt
+test/failures/
+*.log
+
+# ─────────────────────────────────────────────
+# Android
+# ─────────────────────────────────────────────
+.gradle/
+**/android/.gradle/
+**/android/.kotlin/
+**/android/captures/
+local.properties
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/**/GeneratedPluginRegistrant.java
+.cxx/
+
+# Firma de la app -- NUNCA en el repositorio
+**/android/key.properties
+**/android/keys/
+*.jks
+*.keystore
+
+# ─────────────────────────────────────────────
+# iOS / macOS
+# ─────────────────────────────────────────────
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/ephemeral/
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/build/
+**/ios/ServiceDefinitions.json
+
+# Xcode: preferencias por-desarrollador (los xcshareddata SI van al repo)
+**/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+DerivedData/
+*.moved-aside
+
+# Certificados y perfiles de firma iOS
+*.ipa
+*.dSYM.zip
+*.mobileprovision
+*.p8
+*.p12
+*.cer
+*.certSigningRequest
+
+# ─────────────────────────────────────────────
+# Fastlane  (Appfile/Fastfile/Pluginfile SI van al repo)
+# ─────────────────────────────────────────────
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/test_output/
+**/fastlane/screenshots/
+**/fastlane/builds/
+*.lane_context
+
+# ─────────────────────────────────────────────
+# Binarios compilados sueltos
+# ─────────────────────────────────────────────
+*.apk
+*.aab
+*.aar
+*.so.sym
+*.symbols
+
+# ─────────────────────────────────────────────
+# Firebase CLI
+# ─────────────────────────────────────────────
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ─────────────────────────────────────────────
+# Editores e IDEs
+# ─────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.history/
+.claude/settings.local.json
+
+# ─────────────────────────────────────────────
+# Sistema operativo
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ─────────────────────────────────────────────
+# Artefactos de merge / respaldo
+# ─────────────────────────────────────────────
+*.orig
+*.rej
+*.bak
+*.tmp
+
+# ─────────────────────────────────────────────
+# Secretos y entorno
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+secrets.json
+service-account*.json

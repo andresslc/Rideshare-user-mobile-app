@@ -1,0 +1,156 @@
+# Builds a signed Android App Bundle and registers the release with Shorebird.
+# It does NOT upload to Google Play - store submission stays manual.
+# Only releases built here can receive Shorebird patches later.
+name: Shorebird Release (Android)
+
+on:
+  workflow_dispatch:
+    inputs:
+      flavor:
+        description: Flavor to release
+        type: choice
+        options:
+          - production
+          - staging
+          - dev
+        default: production
+      play-track:
+        description: Google Play track to upload the AAB to
+        type: choice
+        options:
+          - internal
+          - alpha
+          - beta
+          - production
+          - none
+        default: internal
+      flutter-version:
+        description: Flutter version to build the release with (must be one Shorebird supports)
+        default: "3.47.4"
+
+concurrency:
+  group: shorebird-release-android-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      SHOREBIRD_TOKEN: ${{ secrets.SHOREBIRD_TOKEN }}
+      FLAVOR: ${{ inputs.flavor || 'production' }}
+      FLUTTER_VERSION: ${{ inputs.flutter-version || '3.47.4' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Resolve entrypoint for flavor
+        run: |
+          case "$FLAVOR" in
+            dev)        echo "TARGET=lib/main_dev.dart"     >> "$GITHUB_ENV" ;;
+            staging)    echo "TARGET=lib/main_staging.dart" >> "$GITHUB_ENV" ;;
+            production) echo "TARGET=lib/main_prod.dart"    >> "$GITHUB_ENV" ;;
+            *) echo "::error::Unknown flavor: $FLAVOR"; exit 1 ;;
+          esac
+
+      # Without this Gradle silently falls back to the debug key: Play rejects
+      # those builds and they refuse to install over an existing copy.
+      - name: Restore upload keystore
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload-keystore.jks"
+          cat > android/key.properties <<EOF
+          storeFile=$RUNNER_TEMP/upload-keystore.jks
+          storePassword=$ANDROID_STORE_PASSWORD
+          keyAlias=$ANDROID_KEY_ALIAS
+          keyPassword=$ANDROID_KEY_PASSWORD
+          EOF
+
+      # android/local.properties is gitignored, and app/build.gradle.kts reads
+      # MAPS_API_KEY from it into the manifest. A fresh checkout has no file,
+      # so maps come up blank unless we write it here.
+      - name: Write android/local.properties
+        env:
+          MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
+        run: |
+          cat > android/local.properties <<EOF
+          sdk.dir=$ANDROID_SDK_ROOT
+          MAPS_API_KEY=$MAPS_API_KEY
+          EOF
+
+      # gradle.properties on main asks for -Xmx8G + 4G metaspace = 12GB per
+      # JVM. Standard GitHub Ubuntu runners have 16GB total and the Kotlin
+      # daemon needs its own JVM, so the build gets OOM-killed (exit 143).
+      # Shrink JUST FOR THIS RUNNER — the sed happens on the VM's copy and
+      # is thrown away when the VM is destroyed. Local dev keeps -Xmx8G.
+      - name: Shrink Gradle memory to fit the CI runner
+        run: sed -i 's/-Xmx8G -XX:MaxMetaspaceSize=4G/-Xmx4G -XX:MaxMetaspaceSize=1G/' android/gradle.properties
+
+      - uses: shorebirdtech/setup-shorebird@v1
+        with:
+          cache: true
+
+      - uses: shorebirdtech/shorebird-release@v1
+        id: release
+        with:
+          platform: android
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          args: --flavor ${{ env.FLAVOR }} -t ${{ env.TARGET }}
+
+      - name: Upload app bundle as CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: appbundle-${{ env.FLAVOR }}-${{ steps.release.outputs.release-version }}
+          path: build/app/outputs/bundle/**/*.aab
+          if-no-files-found: error
+
+      # Auto-upload to Google Play. Track defaults to `internal` (safest);
+      # promote to production manually from Play Console once QA passes.
+      # First-ever upload for a Play app MUST be done by hand — the API cannot
+      # create the app listing. After the first manual upload, this step works.
+      - name: Locate AAB
+        if: ${{ inputs.play-track != 'none' }}
+        id: find-aab
+        run: |
+          AAB_PATH=$(find build/app/outputs/bundle -name "*.aab" | head -n1)
+          echo "path=$AAB_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to Google Play
+        if: ${{ inputs.play-track != 'none' }}
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.example.rideapp
+          releaseFiles: ${{ steps.find-aab.outputs.path }}
+          track: ${{ inputs.play-track }}
+          status: completed
+
+      - name: Summary
+        run: |
+          {
+            echo "### Shorebird release created"
+            echo ""
+            echo "| Field | Value |"
+            echo "| --- | --- |"
+            echo "| Flavor | $FLAVOR |"
+            echo "| Release version | ${{ steps.release.outputs.release-version }} |"
+            echo "| Flutter | $FLUTTER_VERSION |"
+            echo "| Play track | ${{ inputs.play-track }} |"
+            echo ""
+            if [ "${{ inputs.play-track }}" = "none" ]; then
+              echo "AAB saved as CI artifact only. Upload to Play Console manually."
+            elif [ "${{ inputs.play-track }}" = "production" ]; then
+              echo "AAB uploaded straight to production track. Users will get the update."
+            else
+              echo "AAB uploaded to '${{ inputs.play-track }}' track. Promote to production from Play Console when ready."
+            fi
+            echo ""
+            echo "Patches only reach users who install THIS build. Do not delete the release in Shorebird."
+          } >> "$GITHUB_STEP_SUMMARY"

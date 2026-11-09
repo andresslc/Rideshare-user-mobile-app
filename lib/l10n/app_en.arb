@@ -1,0 +1,771 @@
+{
+  
+      "rideDetails": "Ride Details",
+        "noSpecialRequest": "No special request",
+"special_request_subtitle":"You can add a special request to your driver (e.g., extra luggage, preference for a quiet ride, etc.)",
+    "paymentMethod": "Payment Method",
+    "total_time": "Total Time",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "total_amount"  : "Total Amount", 
+  "addReviewHere": "Add your review here...",
+  "submitReview": "Submit Review",
+  "address":"Address",
+  "we_couldnot_found":"We couldn't find any matching addresses",
+  "use_this_address":"Use this address",
+  "cancellationReason": "Cancellation Reason",
+  "enter_address":"Enter your address",
+  "noReasonProvided": "No reason provided",
+ "please_reason" :"Please enter a reason",
+  "unable_to_submit":"Unable to submit feedback",
+  "please_select_rating":"Please select rating",
+  "app_name": "Ride App",
+  "total_seats_booked":"Total Seats Booked",
+  "seat_booked":"Seat Booked",
+  "review": "Review",
+  "select_language": "Select Language",
+  "english": "English",
+  "language_already_selected": "This language is already selected",
+  "view_profile": "View Profile",
+  "my_cards": "My Cards",
+  "carpool_ride":"Carpool",
+  "no_carpool":"No carpool rides found",
+  "spanish": "Spanish",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "yes": "Yes",
+  "no": "No",
+  "next": "Next",
+  "back": "Back",
+  "done": "Done",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete",
+  "confirm": "Confirm",
+  "and": "and",
+  "turn_on": "Turn On",
+  "skip": "Skip",
+  "search": "Search",
+  "special_request": "Special Request",
+  "onboarding_title_1": "Book a Ride Easily",
+  "onboarding_subtitle_1": "Find and book rides near you in seconds.",
+  "onboarding_title_2": "Track Your Driver",
+  "onboarding_subtitle_2": "Real-time tracking from pickup to drop-off.",
+  "onboarding_title_3": "Safe & Secure",
+  "onboarding_subtitle_3": "Your safety is our top priority.",
+  "get_started": "Get Started",
+  "welcome_back": "Welcome Back",
+  "login_subtitle": "Please enter your phone number to log in.",
+  "phone_number": "Phone Number",
+  "enter_phone_number": "Enter your phone number",
+  "add_phone_number": "Add phone number",
+  "continue_with_phone": "Continue With Phone Number",
+  "no_account_prompt": "Don't have an account? Sign Up",
+  "phone_required": "Phone number is required",
+  "hour":"hour",
+  "hours":"hours",
+  "min": "min",
+  "mins": "mins",
+  "phone_invalid": "Phone number must be valid",
+  "verification": "Verification",
+  "otp_subtitle": "Enter the OTP code sent to {number}",
+  "@otp_subtitle": {
+    "description": "OTP subtitle with dynamic phone number",
+    "placeholders": {
+      "number": {}
+    }
+  },
+  "enter_otp": "Enter OTP",
+  "otp_required": "Please enter the OTP to proceed",
+  "invalid_otp": "Invalid OTP code. Please try again.",
+  "did_not_receive_code": "Didn’t receive the code?",
+  "resend_now": "Resend Now",
+  "number_verified": "Number Verified",
+  "number_verified_message": "Your phone number has been verified successfully!",
+  "account_deleted_title": "Account Deleted!",
+  "account_deleted_message": "Your account has been deleted successfully.",
+  "funds_added_title": "Funds Added!",
+  "funds_added_message": "Funds have been added to your wallet.",
+  "language_updated_title": "Language Updated!",
+  "feedback_submitted_title": "We appreciate your Feedback!",
+  "language_updated_message": "Tu idioma se ha actualizado correctamente.",
+
+  "feedback_submitted_message": "Your review has been submitted.",
+  "verify": "Verify",
+  "forgot_password": "Forgot Password",
+  "forgot_password_subtitle": "Enter your email address to reset your password.",
+  "back_to_login": "Back to Login",
+  "create_profile": "Create Profile",
+  "signup_subtitle": "Please enter your details to sign up.",
+  "sign_up": "Sign Up",
+  "already_have_account": "Already have an account? Sign In",
+  "by_registering": "By registering, you accept our",
+  "full_name": "Full Name",
+  "accepting":"Accepting...",
+  "accept":"Accept",
+  "enter_full_name": "Enter your full name",
+  "full_name_required": "Full name is required",
+  "date_of_birth": "Date of Birth",
+  "select_date_of_birth": "Select your date of birth",
+  "date_of_birth_required": "Please select your date of birth",
+  "field_required": "This field is required",
+  "name_min_length": "Name must be at least {min} characters",
+  "@name_min_length": {
+    "description": "Validation message shown when name is too short",
+    "placeholders": {
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "name_no_numbers": "Name cannot contain numbers",
+  "name_invalid_characters": "Name contains invalid characters",
+  "email_address": "Email Address",
+  "enter_email": "Enter your email address",
+  "upload_profile_picture": "Upload Profile Picture",
+  "optional": "(Optional)",
+  "my_profile": "My Profile",
+  "edit_profile": "Edit Profile",
+  "logout": "Logout",
+  "where_to": "Where to?",
+  "location_access": "Location Access",
+  "current_location": "Current Location",
+  "set_pickup_location": "Set Pickup Location",
+  "pickup_location": "Pickup Location",
+  "drop_location":"Drop Location",
+  "dropoff_location": "Drop-off Location",
+  "set_dropoff_location": "Set Drop-off Location",
+  "confirm_location": "Confirm Location",
+  "economy": "Economy",
+  "no_comp_found":"No completed rides found",
+    "cancel_carpool":"Cancel Carpool",
+
+  "no_cancelled_found":"No cancelled rides found",
+  "avg_time":"Avg Time",
+  "pickup_location": "Pickup Location",
+  "dropoff_location": "Drop-off Location",
+  "carpool": "Carpool",
+  "stop":"Stop",
+  "min_label": "min",
+  "mins_label": "mins",
+  "via_card":"Via Card",
+  "via_wallet":"Via Wallet",
+  "luxury": "Luxury",
+  "select_ride": "Select Ride",
+  "estimated_time": "Estimated Time",
+  "estimated_fare": "Estimated Fare",
+  "finding_driver": "Finding your driver...",
+  "finding_ride_text": "Please wait, While a driver sends\n you an offer!",
+  "your_complete_finished_trip":"Your finished trips will appear here",
+  "please_wait_for_calculation":"Please wait for the fare calculation",
+  "enter_last_name":"Enter last name",
+  "enter_first_name":"Enter first name",
+  "no_offers_available":"No offers available right now",
+ "your_have_not_cancelled":"Your haven't cancelled any rides",
+ "no_rides_cancelled_by_driver":"No rides cancelled by driver",
+ "carpool_text":"No carpool rides yet",
+ "transactions":"No transactions yet",
+ "type_amount":"Type amount",
+ "notification_center":"You're all caught up",
+  "find_ride": "Find Ride",
+  "driver_on_the_way": "Driver is on the way",
+  "driver_arriving_in": "Reaching in around {time}",
+  "@driver_arriving_in": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "estimated_arrival": "Estimated arrival: {time}",
+  "@estimated_arrival": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "driver_arrived": "Driver has arrived",
+  "driver_arrived_at_pickup": "Driver arrived at Pickup Point!",
+  "driver_arrived_at_location": "Driver arrived at {location}",
+  "@driver_arrived_at_location": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "driver_arrived_sheet_warning":"To avoid ride cancellation, please be at the pickup location before the timer runs out.",  "ride_started": "Ride Started",
+  "ride_in_progress": "Ride in Progress!",
+  "reached_destination": "You have reached your destination",
+  "ride_completed": "Completed Rides",
+  "ride_accepted_successfully": "Your ride has been accepted successfully!",
+  "cancel_ride": "Canceled Rides",
+    "cancel_rid": "Cancel Ride",
+    "cancel_rides": "Cancel Rides",
+
+  "sos": "SOS",
+  "ride_verification_code": "Ride Verification Code",
+  "ride_verification_code_disclaimer": "The fare will be deducted from your account as soon as the driver enters your verification code to start the ride.",
+  "ride_details": "View Ride Details",
+  "i_am_coming": "I am coming",
+  "cancel_ride_request": "Cancel Ride Request",
+  "cancel_ride_confirmation": "Are you sure you want to cancel this ride?",
+  "cancel_ride_question": "Why are you cancelling this ride?",
+  "rider_cancel_reason_driver_not_responding": "Driver is not responding",
+  "rider_cancel_reason_driver_asked_cancel": "Driver asked me to cancel",
+  "rider_cancel_reason_pickup_too_long": "Driver is taking long",
+  "rider_cancel_reason_changed_plans": "Changed my plans",
+  "rider_cancel_reason_booked_mistake": "Booked by mistake",
+  "rider_cancel_reason_other": "Other",
+  "driver_profile": "Driver Profile",
+  "call_driver": "Call Driver",
+  "number_of_passengers": "Number of Passengers",
+  "passengers": "{count} Passengers",
+  "contact_driver": "Contact Driver",
+  "payment_method": "Payment Method",
+  "wallet": "Wallet",
+  "add_payment_method": "Add Payment Method",
+  "add_card": "Add Card",
+  "card_number": "Card Number",
+  "expiry_date": "Expiry Date",
+  "cvv": "CVV",
+  "card_holder_name": "Card Holder Name",
+  "add_account": "Add Account",
+  "delete_account": "Delete Account",
+  "ride_history": "Ride History",
+  "no_rides_found": "No rides found",
+  "rate_your_ride": "Rate Your Ride",
+  "leave_feedback": "Leave Feedback",
+  "add_tip": "Add Tip",
+  "submit": "Submit",
+  "settings": "Settings",
+  "notifications": "Notifications",
+  "privacy_policy": "Privacy Policy",
+  "terms_conditions": "Terms & Conditions",
+  "continue_label": "Continue",
+  "support": "Support",
+  "description_valid":"Description is required",
+  "help_center": "Help Center",
+  "something_went_wrong": "Something went wrong. Please try again.",
+  "no_internet": "No internet connection",
+  "request_timed_out": "Request Timed Out",
+  "connection_error": "Unable to connect",
+  "auth_failed": "Authentication failed",
+  "rate_limit": "Rate limit exceeded",
+  "redirect_error": "Redirect error",
+  "timeout": "Request timed out",
+  "request_cancelled": "Request was cancelled",
+  "unknown_error": "An unknown error occurred",
+  "invalid_status": "Received invalid status code",
+  "unexpected_error": "Unexpected error",
+  "try_again": "Try Again",
+  "home": "Home",
+  "ride_history": "Rider History",
+  "date": "Date",
+  "status": "Status",
+  "account_name":"Account Info",
+  "type": "Type",
+  "price": "Price",
+  "no_transactions_found": "No transaction found",
+  "withdraw_funds": "Withdraw Funds",
+  "available_balance": "Available Balance",
+  "total_balance": "Total Balance",
+  "regular_balance": "Cash Balance",
+  "rewarded_balance": "Rewarded Balance",
+  "regular": "Regular",
+  "rewarded": "Rewarded",
+  "enter_amount": "Enter amount",
+  "confirm": "Confirm",
+  "settings": "Settings",
+  "notifications": "Notifications",
+  "payment_method": "Payment Method",
+  "language": "Language",
+  "saved_locations": "Saved Locations",
+  "add_location": "Add Location",
+  "office": "Office",
+  "work": "Work",
+  "gym": "Gym",
+  "delete_account": "Delete Account",
+  "transactionHistory": "Transaction History",
+  "all": "All",
+  "paid": "Paid",
+  "withdrawn": "Withdrawn",
+  "location_permission_title": "Location Permission",
+  "permission_denied_mesg": "Ride App needs your location to show nearby rides and provide accurate pickup/dropoff services. Please grant location permission to continue.",
+  "location_permission_required_title": "Location Permission Required",
+  "permanently_denied_mesg": "Location permission has been permanently denied. Please enable it in your device settings to use location-based features.",
+  "location_services_disabled_title": "Location Services Disabled",
+  "location_services_disabled_mesg": "Location services are currently disabled on your device. Please enable them in your device settings to continue.",
+  "failed_to_request": "Failed to request location permission",
+  "error_occurred": "An error occurred. Please try again.",
+  "image_file_too_large": "File size exceeds {maxSizeInMB}MB. Please select a smaller file.",
+  "@image_file_too_large": {
+    "placeholders": {
+      "maxSizeInMB": {
+        "type": "int"
+      }
+    }
+  },
+  "image_invalid_type": "Invalid file type: .{extension}. Only JPG and PNG are allowed.",
+  "@image_invalid_type": {
+    "placeholders": {
+      "extension": {
+        "type": "String"
+      }
+    }
+  },
+  "open_settings": "Open Settings",
+  "add_funds": "Add Funds",
+  "themePreferences": "Theme Preferences",
+  "themeAutomatic": "Automatic (Day & Night Mode)",
+  "themeAutomaticSubtitle": "Light theme during the day and dark theme at night.",
+  "themeDark": "Dark",
+  "themeDarkSubtitle": "Always use dark mode",
+  "themeLight": "Light",
+  "themeLightSubtitle": "Always use light mode",
+  "profile": "Profile",
+  "editProfile": "Edit Profile",
+  "completed": "Completed",
+    "enter_city":"Enter city",
+      "enter_state":"Enter state",
+"search_address":"Search Address",
+  "cancelled": "Cancelled",
+  "select_location": "Select a location",
+  "unknown_address": "Unknown address",
+  "error_fetching_address": "Error fetching address",
+  "search_placeholder": "Search for a place...",
+  "search_pickup": "Search for a Pickup...",
+  "search_dropoff": "Search for a Drop-off...",
+  "selected_location_label": "Selected Location",
+  "save_location": "Save This Location",
+  "location_subtitle":"Your Location has been updated successfully.",
+  "location_deleted_successfully": "Location deleted successfully",
+  "no_saved_locations_found": "No saved locations found",
+  "please_select_valid_location": "Please select a valid location",
+  "please_choose_location_with_full_address": "Please choose a location with full address",
+  "enter_location_name": "Enter location name",
+  "name_this_location": "Name This Location",
+  "type_here": "Type Here",
+  "location": "Location",
+  "select_location": "Select Location",
+  "edit_location": "Edit This Location",
+  "reviews": "Reviews",
+  "customer_reviews": "Customer Reviews",
+  "total_reviews": "{count} Reviews",
+  "star_count": "{count} stars",
+  "days_ago": "{count} days ago",
+  "weeks_ago": "{count} weeks ago",
+  "dashboard": "Home",
+  "update_profile": "Update Profile",
+  "update_profile_subtitle": "Update your profile information below",
+  "valid_amount": "Enter a valid amount",
+  "amount_must_be_greater_than_0": "Amount must be greater than 0",
+  "max_2_decimal_places_allowed": "Max 2 decimal places allowed",
+  "please_select_a_card": "Please select a card",
+  "attached_cards": "Attached Cards",
+  "no_cards_available": "No cards available",
+  "logoutDialogTitle": "Confirm Logout",
+  "logoutDialogSubtitle": "Are you sure you want to logout your account?",
+  "cancel": "Cancel",
+  "logout": "Logout",
+  "noCardsFound": "No cards found",
+  "attachAnotherCard": "Attach Another Card",
+  "addCard": "Add Card",
+  "cardDeletedSuccessfully": "Card deleted successfully",
+  "cardAddedSuccessfully": "Card added successfully",
+  "defaultCardUpdated": "Default card updated",
+  "threeDSMissingClientSecret": "3D Secure verification is required, but client secret is missing.",
+  "threeDSMissingPaymentMethod": "3D Secure verification requires a valid payment method.",
+  "threeDSVerificationFailed": "Payment failed during 3D Secure verification.",
+  "card_label": "Card",
+  "masked_card_number": "**** **** **** {last4}",
+  "somethingWentWrong": "Something went wrong",
+  "delete_account_otp_prefix": "We will send a 6-digit code to",
+  "no_drivers_available":"No Drivers  Available",
+  "we_could_not_find":"We couldn’t find any available drivers near your pickup location right now. You can try again in a moment or explore other ride options.",
+  "delete_account_data_warning": "Your data will be removed from our database permanently.",
+  "delete_account_ride_ongoing": "You cannot delete your account while a ride is in progress. Please complete or cancel the ride first.",
+  "send_otp": "Send OTP",
+  "please_enter_otp": "Please enter 6 digit OTP",
+  "verify_delete_account": "Verify & Delete Account",
+  "ride_type_economy": "Economy",
+  "ride_type_luxury": "Luxury",
+  "ride_type_private": "Private",
+  "ride_type_standard": "Standard",
+  "ride_date_today": "Today",
+  "ride_date_yesterday": "Yesterday",
+  "end_ride": "End Ride",
+  "please_select_rating": "Please select a rating",
+  "upload_image": "Upload Image",
+  "take_photo": "Take Photo",
+  "remove_photo": "Remove Photo",
+  "switch_ride":"Switch Ride",
+  "keep_waiting":"Keep waiting",
+  "profile_not_found": "Profile not found",
+  "profile_data_not_loaded": "Profile data not loaded",
+  "no_changes_to_update": "No changes to update",
+  "profile_updated_success": "Profile updated successfully",
+  "upload_profile_picture_required": "Please upload a profile picture",
+  "delete_card_confirmation": "Are you sure you want to delete this card?",
+  "feed_back":"Feedback",
+  "subtitle_description":              "We value your feedback! Please rate your driver and share your experience to help us improve our service. Thank you.",
+"report_submitted":"Report Submitted",
+  "how_was_the_driver":"How was the driver?",
+  "your_rating":"Your Rating",
+  "rating":"Ratings",
+  "ride_complete": "Ride Completed",
+  "skip":"Skip",
+  "location_updated":"Location Updated!",
+  "thank_you_for_riding_with_us":"Thank you for riding with Ride App",
+  "thank_you_for_riding":"Thank you for riding with Ride App",
+  "see_you_on_your_next_trip":"See you on your next trip!",
+  "total_distance":"Total Distance",
+  "subtitle_dialgue": "Your report has been submitted We'll investigate the issue!",
+  "ride_time":"Ride Time",
+  "total_fare":"Total Fare",
+  
+  "confirm_pickup":"Confirm Pickup",
+  "confirm_dropoff":"Confirm Drop-off",
+  "report_driver":"Report Driver",
+  "leave_a_review":"Leave A Review",
+  "reason":"Reason",
+  "by_user":"By User",
+  "by_driver":"By Driver",
+  "submit":"Submit",
+  "hint_description":"Description",
+  "ride_history":"Ride History",
+  "no_rides":"No rides available",
+  "dialogue":"Please enter a description",
+
+  "we_appreciate_issue":"We appreciate your feedback. Please provide details & We'll investigate the issue.",
+  "invalid_email":"Please enter a valid email address",
+  "email_too_long": "Email address is too long",
+  "email_hint": "Enter your email address",
+  "defaultt": "Default",
+
+  "delete_card": "Delete Card",
+  "delete_location": "Delete Location",
+  "delete_location_confirmation": "Are you sure you want to delete this saved location?",
+  "no_transactions_found" : "No transactions found",
+  "share_ride" : "Share",
+  "tbd": "TBD",
+  "miles" : "miles",
+
+  "chat_today": "Today",
+  "chat_yesterday": "Yesterday",
+  "chat_message_hint": "Message",
+
+  "chat_block": "Block",
+  "chat_report": "Report",
+  "report_user": "Report User",
+  "report_reason_unprofessional": "Unprofessional Behavior",
+  "report_reason_poor_communication": "Poor Communication",
+  "report_reason_fake_account": "Fake or Impersonating Account",
+  "report_reason_harassment": "Harassment or Bullying",
+  "report_reason_abuse": "Abuse or Misconduct",
+  "report_reason_violation_policies": "Violation Policies",
+  "block_user": "Block User",
+  "block_user_confirmation": "Are you sure you want to block this user?",
+  "don_t_block": "Don't Block",
+  "block_now": "Block Now",
+  "requested_carpool": "Requested Carpool",
+  "no_requested_carpool": "No requested carpool found.",
+  "booking_id_with_id": "Booking ID: {id}",
+  "@booking_id_with_id": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel_request": "Cancel Request",
+  "carpool_driver": "Carpool Driver",
+  "searching_carpool": "Searching for available\ncarpool rides...",
+  "ride_start_time": "Ride Start Time",
+  "available_seats_label": "Available Seats",
+  "seats_count": "{count} Seats",
+  "@seats_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "per_person": "/per person",
+  "please_wait": "Please wait...",
+  "request_sent": "Request sent",
+  "send_request": "Send Request",
+  "driver_label": "Driver",
+  "inappropriate_behavior": "Inappropriate behavior",
+  "mins_label": "Mins",
+  "map_load_error": "Map load error: {error}",
+  "@map_load_error": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "number_of_passengers_label": "Number of passenger",
+  "persen": "/person",
+  "select_pickup_dropoff": "Please select pickup and dropoff locations.",
+  "select_ride_type_error": "Please select a ride type.",
+  "unable_calculate_distance": "Unable to calculate ride distance.",
+  "fare_too_low": "Estimated fare is too low to proceed.",
+  "via_wallet": "Via Wallet",
+  "start_label": "Start",
+  "end_label": "End",
+  "socket_error_502": "Live ride updates are temporarily unavailable. Please try again.",
+  "socket_error_auth": "Your session expired. Please sign in again.",
+  "socket_error_timeout": "Unable to connect to live ride updates right now. Please try again.",
+  "socket_error_network": "Please check your internet connection and try again.",
+  "socket_error_generic": "Unable to connect to live ride updates right now.",
+  "socket_disconnect_retry": "Connection to live ride updates was lost. Retrying...",
+  "socket_unstable_connection": "Unstable internet connection!",
+  "ride_accepted_success": "Your ride has been accepted successfully!",
+  "driver_arrived_at_place": "Driver arrived at {place}",
+  "@driver_arrived_at_place": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    }
+  },
+  "end_ride": "End Ride",
+  "carpool_request_cancelled_fallback": "Carpool request was cancelled.",
+  "carpool_request_rejected_fallback": "Carpool request was rejected by the driver.",
+  "carpool_request_accepted_fallback": "Carpool request accepted.",
+  "carpool_ride_started_fallback": "Your carpool ride has started!",
+  "payment_verification_missing_client_secret": "Carpool payment verification is required, but client secret is missing.",
+  "no_internet_title": "No Internet Connection",
+  "no_internet_subtitle": "Please check your network settings and try again to continue using the app.",
+  "slow_connection_title": "Connection Too Slow",
+  "slow_connection_subtitle": "Your internet connection is too slow to use the app right now. Please check your network and try again.",
+  "slow_connection_banner": "Unstable connection. Some actions may be delayed.",
+  "retry": "Retry",
+  "enter_route":"Enter Route",
+  "search_results": "Search Results",
+  "recent_locations": "Recent Locations",
+  "popular_nearby": "Popular Nearby",
+  "success":"Success",
+  "error":"Error",
+  "warning":"Warning",
+  "info":"Info",
+
+  "outside_service_region": "Outside Service Region",
+  "outside_service_region_message": "You are not in {regionName} right now. Please choose a location within {regionName} to continue.",
+  "@outside_service_region_message": {
+    "placeholders": {
+      "regionName": {
+        "type": "String"
+      }
+    }
+  },
+  "chat_no_messages_yet": "There are no new messages yet",
+  "promo_code_applied":"Promo Code Applied",
+  "hint_promo":"Apply Promo Code",
+  "apply":"Apply",
+  "promo_code":"Promo Code",
+  "date_of_birth_required": "Date of birth is required",
+  "invalid_date_format": "Invalid date format",
+  "min_age_15_required": "You must be at least 15 years old",
+  "enter_promo":"Enter Promo Code",
+  "enter_promo_subtitle":"Use a promo code to get instant ride discounts.",
+  "remove_promo" :"Remove Promo Code",
+  "remove_promo_message": "Are you sure you want to remove the applied promo code?",
+  "promo_removal_warning": "Changing this will remove your applied promo code.",
+  "please_add_card_to_continue": "Please add a card to continue.",
+  "card_details_incomplete": "Card details incomplete",
+  "unable_cancel_ride_missing_id": "Unable to cancel ride. Missing ride ID.",
+  "unable_share_ride_missing_id": "Unable to share ride. Missing ride ID.",
+  "unable_share_ride_url": "Unable to share ride URL.",
+  "unable_share_carpool_ride_missing_id": "Unable to share carpool ride. Missing ride ID.",
+  "unable_share_carpool_ride_url": "Unable to share carpool ride URL.",
+  "enter_route": "Enter Route",
+  "recent_locations": "Recent Locations",
+  "search_results": "Search Results",
+  "first_name": "First name",
+  "last_name":"Last name",
+  "recent":"Recent",
+  "map":"Map",
+  "pickup":"Pickup",
+  "dropoff":"Drop off",
+  "popular_nearby": "Popular Nearby",
+  "delete_all_notifications": "Delete all notifications",
+  "delete_all_notifications_confirmation": "Are you sure you want to delete all notifications?",
+  "minimum_5_characters_required": "Minimum 5 characters required",
+  "address_cannot_be_only_numbers": "Address cannot be only numbers",
+  "address_invalid": "Invalid address",
+  "city": "City",
+  "state": "State",
+  "only_florida_addresses_supported": "Only Florida (FL) addresses are supported",
+  "where_from": "Where From?",
+  "locating": "Locating...",
+  "choose_on_map": "Choose on map",
+  "confirm_route": "Confirm Route",
+  "set_location_on_map": "Set location on map",
+  "searching_nearby_drivers": "Searching for nearby drivers...",
+  "searching_within_distance": "Searching within {distance}",
+  "@searching_within_distance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "search_step_of": "Step {ring} of {total}",
+  "@search_step_of": {
+    "placeholders": {
+      "ring": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "drivers_notified_count": "{count, plural, =0{No drivers reached yet} =1{1 driver notified} other{{count} drivers notified}}",
+  "@drivers_notified_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "expanding_search_in_seconds": "Widening the search in {seconds}s",
+  "@expanding_search_in_seconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "widening_search_now": "Widening the search...",
+  "searched_up_to_distance": "We searched up to {distance} around your pickup.",
+  "@searched_up_to_distance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "request_another_ride": "Request another ride",
+  "back_to_home": "Back to home",
+  "free_ride": "Free ride",
+  "free_ride_no_payment_needed": "Your promo covers this ride in full. No payment method needed.",
+  "no_drivers_near_you": "No drivers near you",
+  "search_stage_nearby": "Looking for drivers closest to you.",
+  "search_stage_widened": "Nobody nearby yet, so we widened the search to {distance}.",
+  "@search_stage_widened": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "search_stage_last": "Last try: we are now searching up to {distance}.",
+  "@search_stage_last": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_offer_title": "No {category} drivers nearby",
+  "@upgrade_offer_title": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_offer_fallback": "Want us to look for a {category} car for {fare}?",
+  "@upgrade_offer_fallback": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "fare": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_original_fare": "Original fare",
+  "upgrade_new_fare": "New fare",
+  "upgrade_seconds_left": "{seconds, plural, =0{Time is up} =1{1 second left to decide} other{{seconds} seconds left to decide}}",
+  "@upgrade_seconds_left": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade_promo_lost": "Your promo code doesn't apply to {category}. If you accept, you lose your {amount} discount.",
+  "@upgrade_promo_lost": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_promo_lost_no_amount": "Your promo code doesn't apply to {category} and will be removed if you accept.",
+  "@upgrade_promo_lost_no_amount": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_accept": "Search {category}",
+  "@upgrade_accept": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_decline": "No thanks",
+  "upgrade_new_search": "New search: {category}",
+  "@upgrade_new_search": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_insufficient_wallet": "Your wallet balance doesn't cover the {category} fare. Top up your wallet or switch to a card.",
+  "@upgrade_insufficient_wallet": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_no_active_card": "Add a card to switch to {category}.",
+  "@upgrade_no_active_card": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_decision_failed": "We couldn't send your answer. Please try again.",
+  "search_ends_in_seconds": "Last try ends in {seconds}s",
+  "@search_ends_in_seconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "search_finishing_now": "Finishing the search...",
+  "address_search_failed": "Unable to look up this address. You can try again or enter it manually.",
+  "address_search_outside_region": "Choose an address within the service area.",
+  "address_search_retry": "Try again",
+  "address_search_unavailable": "Address search is unavailable. Enter the address manually.",
+  "address_search_incomplete": "This address could not be confirmed. Enter the address manually."
+}

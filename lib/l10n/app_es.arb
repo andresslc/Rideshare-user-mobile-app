@@ -1,0 +1,758 @@
+{
+  "app_name": "Ride App",
+  "select_language": "Seleccionar idioma",
+  "english": "Inglés",
+  "view_profile": "Ver perfil",
+  "my_cards": "Mis tarjetas",
+  "spanish": "Español",
+  "language_already_selected": "Este idioma ya está seleccionado",
+  "ok": "Aceptar",
+  "cancel": "Cancelar",
+  "special_request_subtitle": "Puedes añadir una solicitud especial para tu conductor (por ejemplo, equipaje extra, preferencia por un viaje tranquilo, etc.)",
+"enter_promo_subtitle": "Usa un código promocional para obtener descuentos instantáneos en tu viaje.",
+  "carpool_ride": "Viaje",
+  "yes": "Sí",
+  "we_couldnot_found":"No pudimos encontrar ninguna dirección coincidente",
+  "use_this_address":"Usar esta dirección",
+  "no": "No",
+  "enter_address":"Ingrese su dirección",
+  "address":"Dirección",
+ "total_seats_booked": "Total de asientos reservados",
+ "seat_booked": "Asiento reservado",
+  "report_submitted": "Informe enviado",
+    "rideDetails": "Detalles del viaje",
+    "noSpecialRequest": "Sin solicitud especial",
+     "accepting":"Aceptando...",
+  "accept":"Aceptar",
+  "paymentMethod": "Método de pago",
+  "addReviewHere": "Agrega tu opinión aquí...",
+  "submitReview": "Enviar opinión",
+  "cancellationReason": "Razón de cancelación",
+  "noReasonProvided": "No se proporcionó ninguna razón",
+  "next": "Siguiente",
+  "back": "Atrás",
+  "done": "Hecho",
+  "no_carpool": "No se encontraron viajes compartidos",
+  "save": "Guardar",
+  "edit": "Editar",
+  "delete": "Borrar",
+  "confirm": "Confirmar",
+  "and": "y",
+  "turn_on": "Activar",
+  "skip": "Omitir",
+  "search": "Buscar",
+  "onboarding_title_1": "Reserva un viaje fácilmente",
+  "onboarding_subtitle_1": "Encuentra y reserva viajes cerca de ti en segundos.",
+  "onboarding_title_2": "Sigue a tu conductor",
+  "onboarding_subtitle_2": "Seguimiento en tiempo real desde la recogida hasta el destino.",
+  "onboarding_title_3": "Seguro y protegido",
+  "onboarding_subtitle_3": "Tu seguridad es nuestra máxima prioridad.",
+  "get_started": "Comenzar",
+  "welcome_back": "Bienvenido de nuevo",
+  "login_subtitle": "Por favor, ingresa tu número de teléfono para iniciar sesión.",
+  "phone_number": "Número de teléfono",
+  "enter_phone_number": "Ingresa tu número de teléfono",
+  "add_phone_number": "Agregar número de teléfono",
+  "continue_with_phone": "Continuar con número de teléfono",
+  "no_account_prompt": "¿No tienes una cuenta? Regístrate",
+  "phone_required": "El número de teléfono es obligatorio",
+  "phone_invalid": "El número de teléfono no es válido",
+  "verification": "Verificación",
+  "otp_subtitle": "Ingresa el código OTP enviado a {number}",
+  "@otp_subtitle": {
+    "description": "OTP subtitle with dynamic phone number",
+    "placeholders": {
+      "number": {}
+    }
+  },
+  "enter_otp": "Ingresar OTP",
+  "otp_required": "Por favor, ingresa el OTP para continuar",
+  "invalid_otp": "Código OTP inválido. Inténtalo de nuevo.",
+  "did_not_receive_code": "¿No recibiste el código?",
+  "resend_now": "Reenviar ahora",
+  "number_verified": "Número verificado",
+  "number_verified_message": "¡Tu número de teléfono ha sido verificado con éxito!",
+  "account_deleted_title": "¡Cuenta eliminada!",
+  "account_deleted_message": "Tu cuenta se ha eliminado correctamente.",
+  "funds_added_title": "¡Fondos agregados!",
+  "funds_added_message": "Los fondos se agregaron a tu billetera.",
+  "language_updated_title": "¡Idioma actualizado!",
+  "language_updated_message": "Your language has been updated successfully.",
+
+  "language": "Idioma",
+  "feedback_submitted_title": "¡Agradecemos tus comentarios!",
+  "feedback_submitted_message": "Tu reseña ha sido enviada.",
+  "verify": "Verificar",
+  "forgot_password": "¿Olvidaste tu contraseña?",
+  "forgot_password_subtitle": "Ingresa tu correo electrónico para restablecer tu contraseña.",
+  "back_to_login": "Volver a iniciar sesión",
+  "create_profile": "Crear perfil",
+  "signup_subtitle": "Por favor, ingresa tus datos para registrarte.",
+  "sign_up": "Registrarse",
+  "already_have_account": "¿Ya tienes una cuenta? Inicia sesión",
+  "by_registering": "Al registrarte, aceptas nuestros",
+  "saved_locations": "Ubicaciones guardadas",
+  "add_location": "Agregar ubicación",
+  "office": "Oficina",
+  "work": "Trabajo",
+  "gym": "Gimnasio",
+  "full_name": "Nombre completo",
+  "enter_full_name": "Ingresa tu nombre completo",
+  "full_name_required": "El nombre completo es obligatorio",
+  "date_of_birth": "Fecha de nacimiento",
+  "select_date_of_birth": "Selecciona tu fecha de nacimiento",
+  "date_of_birth_required": "Por favor selecciona tu fecha de nacimiento",
+  "field_required": "Este campo es obligatorio",
+  "name_min_length": "El nombre debe tener al menos {min} caracteres",
+  "@name_min_length": {
+    "description": "Validation message shown when name is too short",
+    "placeholders": {
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "we_could_not_find": "No pudimos encontrar ningún conductor disponible cerca de tu ubicación de recogida en este momento. Puedes intentarlo de nuevo en un momento o explorar otras opciones de viaje.",
+  "reason": "Razón",
+  "switch_ride": "Cambiar viaje",
+  "by_user": "Por el usuario",
+  "keep_waiting": " Seguir esperando ",
+  "by_driver": "Por el conductor",
+  "submit": "Enviar",
+  "we_appreciate_issue":"Agradecemos que nos hayas informado sobre este problema. Nuestro equipo revisará tu reporte y tomará las medidas necesarias para resolverlo. ¡Gracias por ayudarnos a mejorar nuestro servicio!",
+  "invalid_email":"Por favor, introduce una dirección de correo electrónico válida",
+  "leave_a_review":"Deja una reseña",
+  "subtitle_dialgue": "Tu reporte ha sido enviado. ¡Investigaremos el problema!",
+  "report_driver":  "Reportar conductor",
+  "thank_you_for_riding": "Gracias por viajar con Ride App,",
+  "see_you_on_your_next_trip": "¡Nos vemos en tu próximo viaje!",
+  "total_distance": "Distancia total",
+  "ride_time": "Tiempo de viaje",
+  "total_fare": "Tarifa total",
+"no_drivers_available": "No hay conductores disponibles",
+  "hint_description": "Descripción",
+  "ride_history": "Historial de viajes",
+  "dialogue":"Por favor ingresa una descripción",
+  "no_rides": "No hay viajes disponibles",
+  "subtitle_description":"¡Valoramos tus comentarios! Por favor, califica a tu conductor y comparte tu experiencia para ayudarnos a mejorar nuestro servicio. ¡Gracias!",
+  "feed_back":"Retroalimentación",
+  "how_was_the_driver":"¿Cómo estuvo el conductor?",
+  "your_rating":"Tu calificación",
+  "ride_complete": "Viaje completado",
+  "name_no_numbers": "El nombre no puede contener números",
+  "name_invalid_characters": "El nombre contiene caracteres no válidos",
+  "email_address": "Correo electrónico",
+  "enter_email": "Ingresa tu correo electrónico",
+  "upload_profile_picture": "Subir foto de perfil",
+  "optional": "(Opcional)",
+  "my_profile": "Mi perfil",
+  "edit_profile": "Editar perfil",
+  "logout": "Cerrar sesión",
+  "where_to": "¿A dónde vas?",
+  "location_access": "Acceso a ubicación",
+  "current_location": "Ubicación actual",
+  "set_pickup_location": "Establecer punto de recogida",
+  "special_request": "Solicitud especial",
+  "total_time": "Tiempo total",
+  "total_distance": "Distancia total",
+  "total_amount": "Monto total",
+  "set_dropoff_location": "Establecer destino",
+  "confirm_location": "Confirmar ubicación",
+  "economy": "Económico",
+  "carpool": "Compartidos",
+  "luxury": "Lujo",
+  "promo_code_applied":"Código promocional aplicado",
+  "hint_promo":"Aplicar código promocional",
+  "apply":"Aplicar",
+  "promo_code":"Código promocional",
+  
+  "date_of_birth_required": "Se requiere fecha de nacimiento",
+  "invalid_date_format": "Formato de fecha inválido",
+  "min_age_15_required": "Debes tener al menos 15 años",
+
+  "enter_promo":"Ingrese el código promocional",
+  "remove_promo" :"Eliminar código promocional",
+  "remove_promo_message": "¿Estás seguro de que deseas eliminar el código promocional aplicado?",
+  "promo_removal_warning": "Cambiar esto eliminará el código promocional aplicado.",
+
+  "stop": "Parada",
+  "no_cancelled_found":"No se encontraron viajes cancelados",
+ "min": "mín",
+ "hour":"hora",
+ "no_comp_found":"No se encontraron recorridos completados",
+  "avg_time": "Tiempo promedio",
+  "select_ride": "Seleccionar viaje",
+  "estimated_time": "Tiempo estimado",
+  "estimated_fare": "Tarifa estimada",
+  "finding_driver": "Buscando a tu conductor...",
+  "driver_on_the_way": "El conductor está en camino",
+  "driver_arriving_in": "Llegando en aprox. {time}",
+  "@driver_arriving_in": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "estimated_arrival": "Llegada estimada: {time}",
+  "@estimated_arrival": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "driver_arrived": "El conductor ha llegado",
+  "ride_started": "Viaje iniciado",
+  "ride_in_progress": "Viaje en progreso",
+  "reached_destination": "Has llegado a tu destino",
+
+  "ride_completed": "Viaje completado",
+  "completed": "Terminada",
+  "cancelled": "Cancelado",
+  "cancel_ride": "Viajes cancelados",
+  "i_am_coming": "Ya voy",
+  "cancel_ride_confirmation": "¿Estás seguro de que deseas cancelar este viaje?",
+  "cancel_ride_question": "¿Por qué cancelas este viaje?",
+  "rider_cancel_reason_driver_not_responding": "El conductor no responde",
+  "rider_cancel_reason_driver_asked_cancel": "El conductor me pidió que cancelara",
+  "rider_cancel_reason_pickup_too_long": "El conductor está tardando mucho",
+  "rider_cancel_reason_changed_plans": "Cambié mis planes",
+  "rider_cancel_reason_booked_mistake": "Reservé por error",
+  "rider_cancel_reason_other": "Otro",
+  "driver_profile": "Perfil del conductor",
+  "call_driver": "Llamar al conductor",
+  "payment_method": "Método de pago",
+  "wallet": "Billetera",
+  "add_payment_method": "Agregar método de pago",
+  "add_card": "Agregar tarjeta",
+  "card_number": "Número de tarjeta",
+  "expiry_date": "Fecha de vencimiento",
+  "cvv": "CVV",
+  "card_holder_name": "Nombre del titular",
+  "add_account": "Agregar cuenta",
+  "delete_account": "Eliminar cuenta",
+  "ride_history": "Historial de viajes",
+  "no_rides_found": "No se encontraron viajes",
+  "rate_your_ride": "Califica tu viaje",
+  "leave_feedback": "Dejar comentario",
+  "add_tip": "Agregar propina",
+  "submit": "Enviar",
+  "settings": "Ajustes",
+  "please_reason":"Por favor ingresa un motivo",
+  "notifications": "Notificaciones",
+  "privacy_policy": "Política de privacidad",
+  "terms_conditions": "Términos y condiciones",
+  "continue_label": "Continuar",
+  "support": "Soporte",
+  "help_center": "Centro de ayuda",
+  "something_went_wrong": "Algo salió mal. Inténtalo de nuevo.",
+  "no_internet": "Sin conexión a internet",
+  "request_timed_out": "Tiempo de espera de solicitud agotado",
+  "try_again": "Intentar de nuevo",
+  "connection_error": "No se pudo conectar",
+  "auth_failed": "Autenticación fallida",
+  "rate_limit": "Límite de solicitudes excedido",
+  "redirect_error": "Error de redirección",
+  "timeout": "La solicitud ha caducado",
+  "request_cancelled": "Solicitud cancelada",
+  "unknown_error": "Ocurrió un error desconocido",
+  "invalid_status": "Código de estado inválido",
+  "unexpected_error": "Error inesperado",
+  "home": "Inicio",
+  "date": "Fecha",
+  "status": "Estado",
+  "account_name": "Información de la cuenta",
+  "type": "Tipo",
+  "price": "Precio",
+  "no_transactions_found": "No se encontraron transacciones",
+  "withdraw_funds": "Retirar fondos",
+  "available_balance": "Saldo disponible",
+  "total_balance": "Saldo Total",
+  "regular_balance": "Saldo Principal",
+  "rewarded_balance": "Saldo de Recompensa",
+  "regular": "Regular",
+  "rewarded": "Recompensa",
+  "enter_amount": "Ingresa el monto",
+  "transactionHistory": "Historial de transacciones",
+  "all": "Todos",
+  "paid": "Pagado",
+  "withdrawn": "Retirado",
+  "location_updated":"Ubicación actualizada",
+  "location_subtitle":"Tu ubicación se ha actualizado correctamente.",
+  "location_deleted_successfully": "Ubicación eliminada con éxito",
+  "no_saved_locations_found": "Ninguna ubicacion salvada",
+  "please_select_valid_location": "Por favor, selecciona una ubicación válida",
+  "please_choose_location_with_full_address": "Por favor, seleccione una dirección válida",
+  "enter_location_name": "Ingresa el nombre de la ubicación",
+  "dashboard":"Inicio",
+  "via_wallet":"A través de billetera",
+  "notification_center":"Ya estás al día",
+"please_reason":"Por favor ingresa un motivo",
+  "via_card":"Mediante tarjeta",
+  "logoutDialogTitle":"Confirmar cierre de sesión",
+  "logoutDialogSubtitle":"¿Estás seguro de que deseas cerrar sesión en tu cuenta?",
+  "location_permission_title": "Permiso de ubicación",
+  "permission_denied_mesg": "Ride App necesita tu ubicación para mostrar viajes cercanos y ofrecer servicios precisos de recogida y destino. Por favor, concede el permiso de ubicación para continuar.",
+  "location_permission_required_title": "Permiso de ubicación requerido",
+  "permanently_denied_mesg": "El permiso de ubicación ha sido denegado permanentemente. Por favor, habilítalo en la configuración del dispositivo.",
+  "location_services_disabled_title": "Servicios de ubicación desactivados",
+  "location_services_disabled_mesg": "Los servicios de ubicación están desactivados. Actívalos en la configuración del dispositivo para continuar.",
+  "failed_to_request": "Error al solicitar el permiso de ubicación",
+  "error_occurred": "Ocurrió un error. Por favor, inténtalo de nuevo.",
+  "image_file_too_large": "El tamaño del archivo excede {maxSizeInMB}MB. Por favor selecciona un archivo más pequeño.",
+  "@image_file_too_large": {
+    "placeholders": {
+      "maxSizeInMB": {
+        "type": "int"
+      }
+    }
+  },
+  "image_invalid_type": "Tipo de archivo inválido: .{extension}. Solo se permiten JPG y PNG.",
+  "@image_invalid_type": {
+    "placeholders": {
+      "extension": {
+        "type": "String"
+      }
+    }
+  },
+  "open_settings": "Abrir configuración",
+  "add_funds": "Agregar fondos",
+  "themePreferences": "Preferencias de tema",
+  "themeAutomatic": "Automático (Modo Día y Noche)",
+  "themeAutomaticSubtitle": "Tema claro durante el día y oscuro por la noche.",
+  "themeDark": "Oscuro",
+  "themeDarkSubtitle": "Usar siempre modo oscuro",
+  "themeLight": "Claro",
+  "themeLightSubtitle": "Usar siempre modo claro",
+  "select_location": "Seleccione una ubicación",
+  "unknown_address": "Dirección desconocida",
+  "error_fetching_address": "Error al obtener la dirección",
+  "search_placeholder": "Buscar un lugar...",
+  "selected_location_label": "Ubicación seleccionada",
+  "profile_not_found": "Perfil no encontrado",
+  "profile_data_not_loaded": "Datos del perfil no cargados",
+  "no_changes_to_update": "No hay cambios para actualizar",
+  "profile_updated_success": "Perfil actualizado con éxito",
+  "upload_profile_picture_required": "Por favor, sube una foto de perfil",
+  "delete_card_confirmation": "¿Estás seguro de que deseas eliminar esta tarjeta?",
+  "invalid_email": "Por favor, introduce una dirección de correo electrónico válida",
+  "email_too_long": "La dirección de correo electrónico es demasiado larga",
+  "email_hint": "Introduce tu dirección de correo electrónico",
+  "noCardsFound": "No se encontraron tarjetas",
+  "attachAnotherCard": "Agregar otra tarjeta",
+  "addCard": "Agregar tarjeta",
+  "cardAddedSuccessfully": "Tarjeta añadida con éxito",
+  "cardDeletedSuccessfully": "Tarjeta eliminada con éxito",
+  "defaultCardUpdated": "Tarjeta predeterminada actualizada",
+  "defaultt": "Predeterminado",
+  "attached_cards": "Tarjetas agregadas",
+  "no_cards_available": "No hay tarjetas disponibles",
+  "please_select_a_card": "Por favor selecciona una tarjeta",
+  "threeDSMissingClientSecret": "Se requiere verificación 3D Secure, pero falta el client secret.",
+  "threeDSMissingPaymentMethod": "La verificación 3D Secure requiere un método de pago válido.",
+  "threeDSVerificationFailed": "El pago falló durante la verificación 3D Secure.",
+  "card_label": "Tarjeta",
+  "masked_card_number": "**** **** **** {last4}",
+  "delete_card": "Eliminar tarjeta",
+  "delete_location": "Eliminar ubicación",
+  "delete_location_confirmation": "¿Estás seguro de que deseas eliminar esta ubicación guardada?",
+  "delete_account_otp_prefix": "Enviaremos un código de 6 dígitos a",
+  "delete_account_data_warning": "Tus datos serán eliminados permanentemente de nuestra base de datos.",
+  "delete_account_ride_ongoing": "No puedes eliminar tu cuenta mientras un viaje está en curso. Completa o cancela el viaje primero.",
+  "send_otp": "Enviar OTP",
+  "please_enter_otp": "Por favor, ingresa el código OTP de 6 dígitos",
+  "verify_delete_account": "Verificar y eliminar cuenta",
+  "ride_type_economy": "Económico",
+  "ride_type_luxury": "Lujo",
+  "ride_type_private": "privada",
+  "ride_type_standard": "Estándar",
+  "ride_date_today": "Hoy",
+  "ride_date_yesterday": "Ayer",
+  "please_select_rating": "Por favor selecciona una calificación",
+  "upload_image": "Subir imagen",
+  "take_photo": "Tomar foto",
+  "remove_photo": "Eliminar foto",
+  "no_transactions_found" : "No se encontraron transacciones",
+  "amount_must_be_greater_than_0": "El monto debe ser mayor que 0",
+  "valid_amount": "Ingresa un monto válido",
+  "max_2_decimal_places_allowed": "Se permiten como máximo 2 decimales",
+  "update_profile": "Actualizar perfil",
+  "share_ride" : "Compartir",
+  "name_this_location":"Nombra esta ubicación",
+  "type_here":"Escribe aquí",
+  "drop_location":"Soltar ubicación",
+  "location":"Ubicación",
+   "pickup_location": "Lugar de recogida",
+  "dropoff_location": "Lugar de destino",
+  "cancelled": "Cancelado",
+  "review": "Reseña",
+  "special_request": "Solicitud especial",
+  "save_location":"Guardar ubicación",
+  "edit_location": "Editar esta ubicación",
+  "miles" : "millas",
+
+  "chat_today": "Hoy",
+  "chat_yesterday": "Ayer",
+  "chat_message_hint": "Mensaje",
+
+  "chat_block": "Bloquear",
+  "chat_report": "Reportar",
+  "report_user": "Reportar usuario",
+  "report_reason_unprofessional": "Comportamiento poco profesional",
+  "report_reason_poor_communication": "Mala comunicación",
+  "report_reason_fake_account": "Cuenta falsa o suplantación",
+  "report_reason_harassment": "Acoso o intimidación",
+  "report_reason_abuse": "Abuso o mala conducta",
+  "report_reason_violation_policies": "Incumplimiento de políticas",
+  "block_user": "Bloquear usuario",
+  "block_user_confirmation": "¿Estás seguro de que quieres bloquear a este usuario?",
+  "don_t_block": "No bloquear",
+  "block_now": "Bloquear ahora",
+  "requested_carpool": "Viaje compartido solicitado",
+  "no_requested_carpool": "No se encontró ningún viaje compartido solicitado.",
+  "booking_id_with_id": "ID de reserva: {id}",
+  "@booking_id_with_id": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel_request": "Cancelar solicitud",
+  "cancel_rid": "Cancelar Viaje",
+
+  "carpool_driver": "Conductor de viaje compartido",
+  "searching_carpool": "Buscando viajes compartidos\ndisponibles...",
+  "search_pickup": "Buscar un lugar de recogida...",
+"search_dropoff": "Buscar un lugar de entrega...",
+  "ride_start_time": "Hora de inicio del viaje",
+    "enter_state":"Ingrese el estado",
+  "enter_city":"Ingrese la ciudad",
+  "search_address":"Buscar dirección",
+
+  "available_seats_label": "Asientos disponibles",
+  "seats_count": "{count} Asientos",
+  "@seats_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "per_person": "/ persona",
+  "persen": "/persona",
+  "please_wait": "Por favor, espera...",
+  "request_sent": "Solicitud enviada",
+  "send_request": "Enviar solicitud",
+  "driver_label": "Conductor",
+  "inappropriate_behavior": "Comportamiento inapropiado",
+  "mins_label": "Min",
+  "map_load_error": "Error al cargar el mapa: {error}",
+  "@map_load_error": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "number_of_passengers_label": "Número de pasajeros",
+  "person": "/persona",
+  "select_pickup_dropoff": "Por favor, seleccione los lugares de recogida y destino.",
+  "select_ride_type_error": "Por favor, seleccione un tipo de viaje.",
+  "unable_calculate_distance": "No se puede calcular la distancia del viaje.",
+  "fare_too_low": "La tarifa estimada es demasiado baja para continuar.",
+  "via_wallet": "Vía Billetera",
+  "start_label": "Inicio",
+  "end_label": "Fin",
+  "socket_error_502": "Las actualizaciones en vivo no están disponibles temporalmente. Inténtalo de nuevo.",
+  "socket_error_auth": "Tu sesión ha expirado. Por favor inicia sesión nuevamente.",
+  "socket_error_timeout": "No se pudo conectar a las actualizaciones en vivo. Inténtalo de nuevo.",
+  "socket_error_network": "Por favor verifica tu conexión a internet.",
+  "socket_error_generic": "No se pudo conectar a las actualizaciones en vivo.",
+  "socket_disconnect_retry": "Se perdió la conexión. Reintentando...",
+  "socket_unstable_connection": "Conexión a internet inestable",
+  "ride_accepted_success": "¡Tu viaje ha sido aceptado con éxito!",
+  "driver_arrived_at_place": "El conductor llegó a {place}",
+  "@driver_arrived_at_place": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    }
+  },
+  "end_ride": "Finalizar viaje",
+  "carpool_request_cancelled_fallback": "La solicitud de viaje compartido fue cancelada.",
+  "carpool_request_rejected_fallback": "La solicitud de viaje compartido fue rechazada por el conductor.",
+  "carpool_request_accepted_fallback": "Solicitud de viaje compartido aceptada.",
+  "carpool_ride_started_fallback": "¡Tu viaje compartido ha comenzado!",
+  "payment_verification_missing_client_secret": "Se requiere verificación de pago para el viaje compartido, pero falta el secreto del cliente.",
+  "cancel_ride_request": "Cancelar solicitud de viaje",
+  "carpool_text": "Aún no hay viajes compartidos",
+  "contact_driver": "Contactar al conductor",
+  "customer_reviews": "Opiniones de clientes",
+  "days_ago": "Hace {count} días",
+  "description_valid": "La descripción es obligatoria",
+  "driver_arrived_at_location": "El conductor llegó a {location}",
+  "@driver_arrived_at_location": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "driver_arrived_at_pickup": "¡El conductor llegó al punto de recogida!",
+  "driver_arrived_sheet_warning": "Para evitar la cancelación del viaje, por favor llega al punto de recogida antes de que se acabe el tiempo.",
+  "editProfile": "Editar perfil",
+  "find_ride": "Buscar viaje",
+  "finding_ride_text": "¡Por favor, espere mientras un conductor le envía una oferta!",
+  "no_offers_available":"No hay ofertas disponibles en este momento",
+    "please_wait_for_calculation":"Por favor, espere a que se calcule la tarifa",
+
+  "hours": "horas",
+  "i_am_coming": "Estoy en camino",
+   "enter_last_name":"Ingrese su apellido",
+  "enter_first_name":"Ingrese su nombre",
+  "min_label": "min",
+  "mins": "mins",
+  "no_rides_cancelled_by_driver": "Ningún viaje cancelado por el conductor",
+  "notification_center": "Estás al día",
+  "number_of_passengers": "Número de pasajeros",
+  "passengers": "{count} pasajeros",
+  "profile": "Perfil",
+  "rating": "Calificaciones",
+  "reviews": "Reseñas",
+  "ride_accepted_successfully": "¡Tu viaje ha sido aceptado con éxito!",
+  "ride_details": "Ver detalles del viaje",
+  "ride_verification_code": "Código de verificación del viaje",
+  "ride_verification_code_disclaimer": "La tarifa se descontará de tu cuenta tan pronto como el conductor ingrese tu código de verificación para iniciar el viaje.",
+  "somethingWentWrong": "Algo salió mal",
+  "sos": "SOS",
+  "specialRequest": "Solicitud especial",
+  "star_count": "{count} estrellas",
+  "tbd": "Por definir",
+  "thank_you_for_riding_with_us": "Gracias por viajar con Ride App",
+  "total_reviews": "{count} reseñas",
+  "transactions": "Aún no hay transacciones",
+  "type_amount": "Escribe el monto",
+  "unable_to_submit": "No se pudo enviar la opinión",
+  "update_profile_subtitle": "Actualiza la información de tu perfil a continuación",
+  "weeks_ago": "Hace {count} semanas",
+  "your_complete_finished_trip": "Tus viajes finalizados aparecerán aquí",
+  "your_have_not_cancelled": "No has cancelado ningún viaje",
+  "outside_service_region": "Fuera de la zona de servicio",
+  "outside_service_region_message": "No te encuentras en {regionName} en este momento. Elige una ubicación dentro de {regionName} para continuar.",
+  "@outside_service_region_message": {
+    "placeholders": {
+      "regionName": {
+        "type": "String"
+      }
+    }
+  },
+  "success": "Éxito",
+  "confirm_pickup":"Confirmar Recogida",
+  "confirm_dropoff":"Confirmar Entrega",
+"error": "Error",
+"warning": "Advertencia",
+"info": "Información",
+  "chat_no_messages_yet": "Aún no hay mensajes nuevos",
+  "please_add_card_to_continue": "Agrega una tarjeta para continuar.",
+  "card_details_incomplete": "Datos de la tarjeta incompletos",
+  "unable_cancel_ride_missing_id": "No se pudo cancelar el viaje. Falta el ID del viaje.",
+  "unable_share_ride_missing_id": "No se pudo compartir el viaje. Falta el ID del viaje.",
+  "unable_share_ride_url": "No se pudo obtener el enlace para compartir el viaje.",
+  "unable_share_carpool_ride_missing_id": "No se pudo compartir el viaje compartido. Falta el ID del viaje.",
+  "unable_share_carpool_ride_url": "No se pudo obtener el enlace para compartir el viaje compartido.",
+  "no_internet_title": "Sin conexión a internet",
+  "no_internet_subtitle": "Por favor, comprueba tu configuración de red e inténtalo de nuevo para seguir usando la aplicación.",
+  "slow_connection_title": "Conexión demasiado lenta",
+  "slow_connection_subtitle": "Tu conexión a internet es demasiado lenta para usar la aplicación en este momento. Comprueba tu red e inténtalo de nuevo.",
+  "slow_connection_banner": "Conexión inestable. Algunas acciones pueden tardar.",
+  "retry": "Reintentar",
+  "enter_route": "Introducir ruta",
+  "recent_locations": "Ubicaciones recientes",
+  "search_results": "Resultados de búsqueda",
+  "first_name":"Nombre de pila",
+  "last_name":"Apellido",
+ "recent":"Reciente",
+  "map":"Mapa",
+  "pickup":"Recogida",
+  "dropoff":"Entrega",
+  "popular_nearby": "Populares cerca",
+  "delete_all_notifications": "Eliminar todas las notificaciones",
+  "delete_all_notifications_confirmation": "¿Estás seguro de que deseas eliminar todas las notificaciones?",
+  "minimum_5_characters_required": "Se requieren al menos 5 caracteres",
+  "address_cannot_be_only_numbers": "La dirección no puede contener solo números",
+  "address_invalid": "Dirección no válida",
+  "city": "Ciudad",
+  "state": "Estado",
+  "only_florida_addresses_supported": "Solo se admiten direcciones de Florida (FL)",
+  "where_from": "¿De dónde?",
+  "locating": "Localizando...",
+  "choose_on_map": "Elegir en el mapa",
+  "confirm_route": "Confirmar ruta",
+  "set_location_on_map": "Fijar ubicación en el mapa",
+  "searching_nearby_drivers": "Buscando conductores cerca...",
+  "searching_within_distance": "Buscando en un radio de {distance}",
+  "@searching_within_distance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "search_step_of": "Paso {ring} de {total}",
+  "@search_step_of": {
+    "placeholders": {
+      "ring": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "drivers_notified_count": "{count, plural, =0{Aún sin conductores avisados} =1{1 conductor avisado} other{{count} conductores avisados}}",
+  "@drivers_notified_count": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "expanding_search_in_seconds": "Ampliamos la búsqueda en {seconds} s",
+  "@expanding_search_in_seconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "widening_search_now": "Ampliando la búsqueda...",
+  "searched_up_to_distance": "Buscamos hasta {distance} alrededor de tu punto de recogida.",
+  "@searched_up_to_distance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "request_another_ride": "Pedir otro viaje",
+  "back_to_home": "Volver al inicio",
+  "free_ride": "Viaje gratis",
+  "free_ride_no_payment_needed": "Tu promoción cubre este viaje por completo. No necesitas método de pago.",
+  "no_drivers_near_you": "No hay conductores cerca",
+  "search_stage_nearby": "Buscando conductores muy cerca de ti.",
+  "search_stage_widened": "Aún no hay nadie cerca, así que ampliamos la búsqueda a {distance}.",
+  "@search_stage_widened": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "search_stage_last": "Último intento: ahora buscamos hasta {distance}.",
+  "@search_stage_last": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_offer_title": "No hay conductores {category} cerca",
+  "@upgrade_offer_title": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_offer_fallback": "¿Quieres que busquemos un auto {category} por {fare}?",
+  "@upgrade_offer_fallback": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "fare": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_original_fare": "Tarifa original",
+  "upgrade_new_fare": "Nueva tarifa",
+  "upgrade_seconds_left": "{seconds, plural, =0{Se acabó el tiempo} =1{Te queda 1 segundo para decidir} other{Te quedan {seconds} segundos para decidir}}",
+  "@upgrade_seconds_left": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "upgrade_promo_lost": "Tu código promocional no aplica a {category}. Si aceptas, pierdes tu descuento de {amount}.",
+  "@upgrade_promo_lost": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_promo_lost_no_amount": "Tu código promocional no aplica a {category} y se quitará si aceptas.",
+  "@upgrade_promo_lost_no_amount": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_accept": "Buscar {category}",
+  "@upgrade_accept": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_decline": "No, gracias",
+  "upgrade_new_search": "Nueva búsqueda: {category}",
+  "@upgrade_new_search": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_insufficient_wallet": "El saldo de tu billetera no cubre la tarifa {category}. Recarga tu billetera o cambia a una tarjeta.",
+  "@upgrade_insufficient_wallet": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_no_active_card": "Agrega una tarjeta para cambiar a {category}.",
+  "@upgrade_no_active_card": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "upgrade_decision_failed": "No pudimos enviar tu respuesta. Inténtalo de nuevo.",
+  "search_ends_in_seconds": "El último intento termina en {seconds} s",
+  "@search_ends_in_seconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "search_finishing_now": "Terminando la búsqueda...",
+  "address_search_failed": "No se pudo buscar esta dirección. Puedes volver a intentarlo o escribirla manualmente.",
+  "address_search_outside_region": "Elige una dirección dentro del área de servicio.",
+  "address_search_retry": "Intentar de nuevo",
+  "address_search_unavailable": "La búsqueda de direcciones no está disponible. Ingresa la dirección manualmente.",
+  "address_search_incomplete": "No se pudo confirmar esta dirección. Ingresa la dirección manualmente."
+}

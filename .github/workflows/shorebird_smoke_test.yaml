@@ -1,0 +1,25 @@
+# Cheapest possible failure: proves SHOREBIRD_TOKEN works and belongs to the
+# right Shorebird organization. Builds nothing, needs no signing secrets.
+# Run this before the release workflow.
+name: Shorebird Smoke Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    env:
+      SHOREBIRD_TOKEN: ${{ secrets.SHOREBIRD_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shorebirdtech/setup-shorebird@v1
+        with:
+          cache: true
+
+      - name: Print Shorebird version
+        run: shorebird --version
+
+      - name: Verify token and organization access
+        run: shorebird account orgs

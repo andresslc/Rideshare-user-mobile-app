@@ -1,0 +1,55 @@
+# include: package:flutter_lints/flutter.yaml
+
+# analyzer:
+#   errors:
+#     depend_on_referenced_packages: ignore
+#   exclude:
+#     - tool/**
+
+# linter:
+#   rules:
+#     # Enforce const wherever possible
+#     prefer_const_constructors: true
+#     prefer_const_declarations: true
+#     prefer_const_literals_to_create_immutables: true
+
+#     # Some stricter rules you might find helpful
+#     unnecessary_const: true
+#     # unnecessary_new: true
+#     always_declare_return_types: true
+#     # avoid_dynamic_calls: true
+#     avoid_print: true
+#     prefer_final_fields: true
+#     prefer_final_locals: true
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+
+linter:
+  rules:
+    # Performance
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - prefer_const_constructors_in_immutables
+
+    # Async safety
+    - cancel_subscriptions
+    - close_sinks
+    - unawaited_futures
+
+    # Modern Dart
+    - use_super_parameters
+
+    # Clean code
+    - unnecessary_await_in_return
+    - directives_ordering
